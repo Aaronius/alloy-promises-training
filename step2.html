@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+    []).push(o),n[o]=function(){var u=arguments;return new Promise(
+    function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+    (window,["alloy"]);
+  </script>
+  <script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+  <script>
+    alloy("configure", {
+      "edgeConfigId": "60928f59-0406-4353-bfe3-22ed633c4f67",
+      "orgId":"334F60F35E1597910A495EC2@AdobeOrg"
+    });
+
+    alloy("sendEvent", {
+      "xdm": {
+        "commerce": {
+          "order": {
+            "purchaseID": "a8g784hjq1mnp3",
+            "purchaseOrderNumber": "VAU3123",
+            "currencyCode": "USD",
+            "priceTotal": 999.98
+          }
+        }
+      }
+    }).then((result) => {
+      console.log("decisions", result.decisions);
+    });
+
+    alloy("getIdentity").then((result) => {
+      // fbq("track", { identity: result.identity.ECID });
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
