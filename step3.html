@@ -32,7 +32,9 @@
       console.log("decisions", result.decisions);
     }).catch((error) => {
       console.log('handling this error in a custom fashion', error.message);
-    });
+    }).finally(() => {
+      console.log('this will always be logged');
+    })
 
     alloy("getIdentity").then((result) => {
       // fbq("track", { identity: result.identity.ECID });
