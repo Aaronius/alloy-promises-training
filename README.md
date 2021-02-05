@@ -1,4 +1,4 @@
-This is a repository I use when training about promises as they related to [Adobe Experience Platform Web SDK](https://github.com/adobe/alloy) JavaScript library.
+This is a repository I use when training about promises as they relate to [Adobe Experience Platform Web SDK](https://github.com/adobe/alloy).
 
 The repository is broken down into separate HTML files that build on each other.
 
